@@ -15,6 +15,7 @@ h1 {
   border-radius: 5px;
   cursor: pointer;
   padding: 5px 0px 5px 0px;
+  text-decoration: none !important;
 }
 
 .row .col-sm-4 {
