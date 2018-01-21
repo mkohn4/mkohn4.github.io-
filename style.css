@@ -23,14 +23,19 @@ h1 {
   position: relative;
   width: 33%;
 }
-.col-sm-4 span {
+.col-sm-4 a span {
   display: block;
   position: relative;
   margin-left: 162%;
   width: 100%;
+  padding: 3px 3px 3px 3px !important;
+  background-color: #3393d1;
+    border-radius: 5px !important;
+    text-align: Center;
+    color: #F1f1f1 !important;
 }
 
-.col-sm-12 span {
+.col-sm-12 a span {
   display: block;
   position: relative;
   margin-left: 46.35%;
