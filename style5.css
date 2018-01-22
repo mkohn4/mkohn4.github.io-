@@ -5,6 +5,18 @@ h1 {
   color: #F1f1f1;
   text-align:center;
 }
+.home {
+  border: 1px solid #000000;
+  padding: 10px 10px 10px 10px;
+  display: inline-flex;
+  position: fixed;
+  margin: -10px 0px 0px 0px;
+  background-color: #f1f1f1;
+}
+.home img {
+  width:30px;
+  height: 30px;
+}
 .container {
   width: 100%;
 }
