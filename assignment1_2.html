@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>CNIT 133 Project 1_2</title>
+  
+  
+  
+      <link rel="stylesheet" href="style4.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+$(document).ready(function(){
+    $("#Submit").click(function(){
+        $("#fade1").fadeTo("slow", 0.15);
+        $("#fade2").fadeTo("slow", 0.4);
+        $("#fade3").fadeTo("slow", 0.7);
+    });
+});
+    </script>
+<script>
+  function process(){
+    var number1, number2, number3, number4, number5, n1, n2, n3, n4, n5, negative, positive, zero;
+
+number1 = document.forms["myform"].elements["num1"].value;
+
+number2 = document.forms["myform"].elements["num2"].value;
+
+number3 = document.forms["myform"].elements["num3"].value;
+    
+number4 = document.forms["myform"].elements["num4"].value;
+    
+number5 = document.forms["myform"].elements["num5"].value;
+negative = 0;
+positive = 0;
+zero = 0;
+n1 = parseInt(number1);
+n2 = parseInt(number2);
+n3 = parseInt(number3);
+n4 = parseInt(number4);
+n5 = parseInt(number5)
+if (n1 < 0) {
+  negative= negative+1;
+}
+if (n2 < 0) {
+  negative= negative+1;
+}
+if (n3 < 0) {
+  negative= negative+1;
+}
+if (n4 < 0) {
+  negative= negative+1;
+}
+if (n5 < 0) {
+  negative= negative+1;
+}
+    
+if (n1 > 0) {
+  positive= positive+1;
+}
+if (n2 > 0) {
+  positive= positive+1;
+}
+if (n3 > 0) {
+  positive= positive+1;
+}
+if (n4 > 0) {
+  positive= positive+1;
+}
+if (n5 > 0) {
+  positive= positive+1;
+}
+    
+if (n1 == 0) {
+  zero= zero+1;
+}
+if (n2 == 0) {
+  zero= zero+1;
+}
+if (n3 == 0) {
+  zero= zero+1;
+}
+if (n4 == 0) {
+  zero= zero+1;
+}
+if (n5 == 0) {
+  zero= zero+1;
+}
+document.forms["myform"].elements["negative_result"].value = negative;
+document.forms["myform"].elements["positive_result"].value = positive;
+document.forms["myform"].elements["zero_result"].value = zero;
+}
+    </script>
+  </head>
+  <body>
+    <a href="index.html" class="home">
+      <img src="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-18-512.png">
+    </a>
+    <a href="assignment1.html"><h1>CNIT Assignment 2 - jQuery</h1></a>
+    <form name="myform">
+<table>
+<tr>
+<td>First Number:</td> 
+<td><input type="text" name="num1" size="10"></td>
+</tr>
+
+<tr>
+<td>Second Number:</td> 
+<td><input type="text" name="num2" size="10"></td>
+</tr>
+  
+<tr>
+<td>Third Number:</td> 
+<td><input type="text" name="num3" size="10"></td>
+</tr>
+ 
+<tr>
+<td>Fourth Number:</td> 
+<td><input type="text" name="num4" size="10"></td>
+</tr>
+
+ <tr>
+<td>Fifth Number:</td> 
+<td><input type="text" name="num5" size="10"></td>
+</tr>
+  
+<tr>
+<td># of Negative #'s</td> 
+<td><input type="text" name="negative_result" size="10" id="fade1" readonly></td>
+</tr>
+ <tr>
+<td># of Positive #'s</td> 
+<td><input type="text" name="positive_result" size="10" id="fade2" readonly></td>
+</tr>
+<tr>
+<td># of 0's is:</td> 
+<td><input type="text" name="zero_result" size="10" id="fade3" readonly></td>
+</tr>
+</table>
+<br><br>
+
+<input type="button" onclick="process()" value="SUBMIT" id="Submit">
+<input type="reset" value="RESET">
+</form>
+</body>
+
+</html>
