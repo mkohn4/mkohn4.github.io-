@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>CNIT 133 Project 2</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <html>
+  <head>
+<script>
+  function process(){
+    var number1, number2, number3, n1, n2, n3, sum, product, average;
+
+number1 = document.forms["myform"].elements["num1"].value;
+
+number2 = document.forms["myform"].elements["num2"].value;
+
+number3 = document.forms["myform"].elements["num3"].value;
+
+n1 = parseInt(number1);
+n2 = parseInt(number2);
+n3 = parseInt(number3);
+sum = n1 + n2 + n3;
+product = n1 * n2 * n3;
+average = (n1 + n2 + n3) / 3;
+document.forms["myform"].elements["sum_result"].value = sum;
+document.forms["myform"].elements["product_result"].value = product;
+document.forms["myform"].elements["average_result"].value = average;
+}
+    </script>
+  </head>
+  <body>
+    <a href="index.html" class="home">
+      <img src="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-18-512.png">
+    </a>
+    <a href="assignment1.html"><h1>CNIT Assignment 2 - Input 3 Integers</h1></a>
+    <form name="myform">
+<table>
+<tr>
+<td>First Number:</td> 
+<td><input type="text" name="num1" size="10"></td>
+</tr>
+
+<tr>
+<td>Second Number:</td> 
+<td><input type="text" name="num2" size="10"></td>
+</tr>
+  
+<tr>
+<td>Third Number:</td> 
+<td><input type="text" name="num3" size="10"></td>
+</tr>
+
+<tr>
+<td>Sum is:</td> 
+<td><input type="text" name="sum_result" size="10" readonly></td>
+</tr>
+ <tr>
+<td>Product is:</td> 
+<td><input type="text" name="product_result" size="10" readonly></td>
+</tr>
+<tr>
+<td>Average is:</td> 
+<td><input type="text" name="average_result" size="10" readonly></td>
+</tr>
+</table>
+<br><br>
+
+<input type="button" onclick="process()" value="SUBMIT">
+<input type="reset" value="RESET">
+</form>
+    </body>
+    </html>
+  
+  
+
+</body>
+
+</html>
