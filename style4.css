@@ -2,8 +2,26 @@ body {
   background: grey;
 }
 h1 {
-  color: #F1f1f1;
+  color: white;
   text-align:center;
+  text-decoration: none;
+}
+h1:hover {
+  color: blue;
+  text-align:center;
+  text-decoration: none;
+}
+.home {
+  border: 1px solid #000000;
+  padding: 10px 10px 10px 10px;
+  display: inline-flex;
+  position: fixed;
+  margin: -10px 0px 0px 0px;
+  background-color: #f1f1f1;
+}
+.home img {
+  width:30px;
+  height: 30px;
 }
 .container {
   width: 100%;
@@ -16,12 +34,17 @@ h1 {
   cursor: pointer;
   padding: 30px 0px 30px 0px;
   text-decoration: none !important;
+  text-align: center !important;
 }
 
 .row .col-sm-4 {
   display: inline-flex;
   position: relative;
   width: 33%;
+}
+.col-sm-4 a,
+.col-sm-12 a {
+  text-decoration: none !important;
 }
 .col-sm-4 a span {
   display: block;
@@ -42,11 +65,11 @@ h1 {
   margin-left: 150%;
   width: 100%;
   padding: 3px 3px 3px 3px !important;
-  background-color: #3393d1;
+  background-color: #f1f1f1 !important;
     border-radius: 5px !important;
-    text-align: Center;
-    color: #F1f1f1 !important;
-    border: 2px solid #3393d1;
+    text-align: center !important;
+    color: #3393d1 !important;
+    border: 2px solid #3393d1 !important;;
     text-decoration: none;
 }
 
@@ -72,7 +95,7 @@ h1 {
     padding: 3px 3px 3px 3px !important;
     background-color: #F1f1f1;
     border-radius: 5px !important;
-    text-align: Center;
+    text-align: center;
     color: #3393d1 !important;
     border: 2px solid #3393d1;
     text-decoration: none;
