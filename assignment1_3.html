@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>CNIT 133 Project 1_2</title>
+ <link rel="stylesheet" href="style4.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+  function process(){
+    var number1, number2, number3, number4, number5, number6, n1, n2, n3, n4, n5, n6;
+
+number1 = document.forms["myform"].elements["num1"].value;
+
+number2 = document.forms["myform"].elements["num2"].value;
+
+number3 = document.forms["myform"].elements["num3"].value;
+    
+number4 = document.forms["myform"].elements["num4"].value;
+    
+number5 = document.forms["myform"].elements["num5"].value;
+
+number6 = document.forms["myform"].elements["num6"].value;
+
+n1 = parseInt(number1);
+n2 = parseInt(number2);
+n3 = parseInt(number3);
+n4 = parseInt(number4);
+n5 = parseInt(number5);
+n6 = parseInt(number6);
+
+document.write( "<table style='border: 1px solid black;'><tr> <th>Number</th> <th>Square</th> <th>Cube</th> </tr>" );
+document.write( "<tr style='text-align:right;'><td>" + n1 + "</td>" + "<td>" + n1*n1 + "</td>" + "<td>" + n1*n1*n1 + "</td></tr>" );
+document.write( "<tr style='text-align:right;'><td>" + n2 + "</td>" + "<td>" + n2*n2 + "</td>" + "<td>" + n2*n2*n2 + "</td></tr>" ); 
+    document.write( "<tr style='text-align:right;'><td>" + n3 + "</td>" + "<td>" + n3*n3 + "</td>" + "<td>" + n3*n3*n3 + "</td></tr>" ); 
+    document.write( "<tr style='text-align:right;'><td>" + n4 + "</td>" + "<td>" + n4*n4 + "</td>" + "<td>" + n4*n4*n4 + "</td></tr>" ); 
+    document.write( "<tr style='text-align:right;'><td>" + n5 + "</td>" + "<td>" + n5*n5 + "</td>" + "<td>" + n5*n5*n5 + "</td></tr>" ); 
+    document.write( "<tr style='text-align:right;'><td>" + n6 + "</td>" + "<td>" + n6*n6 + "</td>" + "<td>" + n6*n6*n6 + "</td></tr>" );  
+document.write( "</table>" ); 
+}
+    </script>
+  </head>
+  <body>
+    <a href="index.html" class="home">
+      <img src="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-18-512.png">
+    </a>
+    <a href="assignment1.html"><h1>CNIT Assignment 2 - Calculation Table</h1></a>
+    <form name="myform">
+<table>
+<tr>
+<td>First Number:</td> 
+<td><input type="text" name="num1" size="10"></td>
+</tr>
+
+<tr>
+<td>Second Number:</td> 
+<td><input type="text" name="num2" size="10"></td>
+</tr>
+  
+<tr>
+<td>Third Number:</td> 
+<td><input type="text" name="num3" size="10"></td>
+</tr>
+ 
+<tr>
+<td>Fourth Number:</td> 
+<td><input type="text" name="num4" size="10"></td>
+</tr>
+
+ <tr>
+<td>Fifth Number:</td> 
+<td><input type="text" name="num5" size="10"></td>
+</tr>
+  
+ <tr>
+<td>Sixth Number:</td> 
+<td><input type="text" name="num6" size="10"></td>
+</tr>
+</table>
+<br><br>
+
+<input type="button" onclick="process()" value="SUBMIT" id="Submit">
+<input type="reset" value="RESET">
+</form>
+    </body>
+
+</html>
