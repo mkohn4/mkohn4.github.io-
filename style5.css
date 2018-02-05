@@ -52,6 +52,9 @@ h1 {
     border: 2px solid #3393d1;
     text-decoration: none;
 }
+.subpage {
+  margin-left: 285% !important;
+}
 .col-sm-4 a span:hover {
   display: block;
   position: relative;
