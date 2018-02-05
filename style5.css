@@ -101,3 +101,14 @@ span {
   font-size: 18px;
   color: #3393d1;
 }
+.progressbar {
+  border: 2px solid #fff;
+  width: 462px;
+  text-align: center;
+  margin-left: 33.5%;
+  background-color: #3693d1;
+}
+.progressbar span {
+  color: #fff !important;
+  text-decoration: none !important;
+}
