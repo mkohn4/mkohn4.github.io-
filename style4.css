@@ -111,6 +111,7 @@ span {
   text-align: center;
   margin-left: 33.5%;
   background-color: #3693d1;
+  border-radius: 15px;
 }
 .progressbar span {
   color: #fff !important;
