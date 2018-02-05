@@ -9,7 +9,7 @@
     
 <script>
   function process(){
-    var number1, number2, number3, n1, n2, n3, sum, product, average;
+    var number1, number2, number3, n1, n2, n3, sum, product, average, Max, Min;
 
 number1 = document.forms["myform"].elements["num1"].value;
 
@@ -23,9 +23,14 @@ n3 = parseInt(number3);
 sum = n1 + n2 + n3;
 product = n1 * n2 * n3;
 average = (n1 + n2 + n3) / 3;
+Max = Math.max(n1,n2,n3);
+Min = Math.min(n1,n2,n3);
 document.forms["myform"].elements["sum_result"].value = sum;
 document.forms["myform"].elements["product_result"].value = product;
 document.forms["myform"].elements["average_result"].value = average;
+document.forms["myform"].elements["Max_result"].value = Max;
+document.forms["myform"].elements["Min_result"].value = Min;
+
 }
     </script>
   </head>
@@ -71,6 +76,14 @@ document.forms["myform"].elements["average_result"].value = average;
 <tr>
 <td>Average is:</td> 
 <td><input type="text" name="average_result" size="10" readonly></td>
+</tr>
+<tr>
+<td>Max is:</td> 
+<td><input type="text" name="Max_result" size="10" readonly></td>
+</tr>
+<tr>
+<td>Min is:</td> 
+<td><input type="text" name="Min_result" size="10" readonly></td>
 </tr>
 </table>
 <br><br>
