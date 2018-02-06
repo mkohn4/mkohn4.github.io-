@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="homework 2.4 for CNIT 133 JavaScript class by Maxwell Kohn">
+  <meta name="description" content="homework 2.5 for CNIT 133 JavaScript class by Maxwell Kohn">
   <title>CNIT 133 Project 1_2</title>
  <link rel="stylesheet" href="style4.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -18,7 +18,7 @@ CAD = 1.34461*USD;
 Euro = 0.88754*USD;
 Yen = 109.350*USD;
 Peso = 18.2806*USD;
-  document.getElementById("outputDiv").innerHTML = "<table style='border: 1px solid black;'><tr> <th>Exchange Rates</th> </tr>  <tr style='text-align:right;'><td>" + 'Currency' + "</td>" + "<td>" + 'Rate' + "</td>" + "<td>" + 'Value' + "</td></tr> <tr style='text-align:right;'><td>" + 'British Pounds' + "</td>" + "<td>" + '0.77521' + "</td>" + "<td>" + BritishPound + "</td></tr> <tr style='text-align:right;'><td>" + 'Canadian Dollars' + "</td>" + "<td>" + '1.33461' + "</td>" + "<td>" + CAD + "</td></tr>  <tr style='text-align:right;'><td>" + 'Euro' + "</td>" + "<td>" + '0.88754' + "</td>" + "<td>" + Euro + "</td></tr> <tr style='text-align:right;'><td>" + 'Yen' + "</td>" + "<td>" + '109.350' + "</td>" + "<td>" + Yen + "</td></tr> <tr style='text-align:right;'><td>" + 'Peso' + "</td>" + "<td>" + '18.2806' + "</td>" + "<td>" + Peso + "</td></tr> </table>"; 
+document.getElementById("outputDiv").innerHTML = "<table style='border: 1px solid black;'><tr> <th>Exchange Rates</th> </tr>  <tr style='text-align:right;'><td>" + 'Currency' + "</td>" + "<td>" + 'Rate' + "</td>" + "<td>" + 'Value' + "</td></tr> <tr style='text-align:right;'><td>" + 'British Pounds' + "</td>" + "<td>" + '0.77521' + "</td>" + "<td>" + BritishPound.toFixed(2) + "</td></tr> <tr style='text-align:right;'><td>" + 'Canadian Dollars' + "</td>" + "<td>" + '1.33461' + "</td>" + "<td>" + CAD.toFixed(2) + "</td></tr>  <tr style='text-align:right;'><td>" + 'Euro' + "</td>" + "<td>" + '0.88754' + "</td>" + "<td>" + Euro.toFixed(2) + "</td></tr> <tr style='text-align:right;'><td>" + 'Yen' + "</td>" + "<td>" + '109.350' + "</td>" + "<td>" + Yen.toFixed(2) + "</td></tr> <tr style='text-align:right;'><td>" + 'Peso' + "</td>" + "<td>" + '18.2806' + "</td>" + "<td>" + Peso.toFixed(2) + "</td></tr> </table>"; 
 }
     </script>
   <script> 
