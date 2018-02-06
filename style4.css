@@ -135,3 +135,6 @@ span {
     width: 412px !important;
 }
 
+#input1:focus {
+  background-color: red;
+}
