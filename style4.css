@@ -117,3 +117,21 @@ span {
   color: #fff !important;
   text-decoration: none !important;
 }
+
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+    width: 500px;
+    margin-top:10px;
+    margin-left: 32%;
+    border-radius:15px;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
+    width: 412px !important;
+}
+
