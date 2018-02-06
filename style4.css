@@ -134,7 +134,9 @@ span {
     display: none;
     width: 412px !important;
 }
-
+#flip {
+  cursor: pointer;
 #input1:focus {
   background-color: red;
 }
+
