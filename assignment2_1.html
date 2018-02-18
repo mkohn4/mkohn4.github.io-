@@ -1,0 +1,120 @@
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="homework 3.2 for CNIT 133 JavaScript class by Maxwell Kohn">
+  <title>CNIT 133 Project 2_1</title>
+ <link rel="stylesheet" href="style4.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+  function process(){
+    var ITEM1, ITEM2, ITEM3, ITEM4, item1, item2, item3, item4, FINAL1, FINAL2, FINAL3, FINAL4, final, NAME;
+ITEM1 = document.forms["myform"].elements["item1"].value;
+ITEM2 = document.forms["myform"].elements["item2"].value;
+ITEM3 = document.forms["myform"].elements["item3"].value;
+ITEM4 = document.forms["myform"].elements["item4"].value;
+NAME = document.forms["myform"].elements["name"].value;
+
+    
+item1 = parseInt(ITEM1);
+item2 = parseInt(ITEM2);
+item3 = parseInt(ITEM3);
+item4 = parseInt(ITEM4);
+    
+if (isNaN(item1) || isNaN(item2) || isNaN(item3) || isNaN(item4) || item1 < 0 || item2 < 0 || item3 < 0 || item4 < 0 || !NAME) {
+
+document.forms["myform"].elements["item1"].value = " "; // clears hw input
+document.forms["myform"].elements["item2"].value = " "; //clears mid input
+document.forms["myform"].elements["item3"].value = " "; //clears final exam input
+document.forms["myform"].elements["item4"].value = " "; //clears acr input
+document.forms["myform"].elements["item1"].focus(); // focuses cursor to hw input
+
+window.alert("All amounts must be greater than 0 and valid Integers.  PSST - Make sure to Enter a Salesperson's Name too!");
+}
+else
+{
+   FINAL1 = (item1 * 239.99);
+  FINAL2 = (item2 * 129.75);
+  FINAL3 = (item3 * 99.95);
+  FINAL4 = (item4 * 350.89);
+  
+  final = (FINAL1+FINAL2+FINAL3+FINAL4) + 200;
+  document.getElementById("outputDiv").innerHTML = NAME + ' made $' + final.toFixed(2) + ' in Salary + Commission this week.  Well done!';
+  }
+    
+  }
+    </script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( document ).tooltip();
+  } );
+  </script>
+  <style>
+  label {
+    display: inline-block;
+    width: 5em;
+  }
+  </style>
+  <script>
+    function reset1() {
+      document.getElementById("outputDiv").innerHTML = "";
+    }
+  </script>
+  </head>
+  <body>
+    <a href="index.html" class="home">
+      <img src="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-18-512.png" alt="small home image">
+    </a>
+    <a href="assignment2.html"><h1>Student Grades</h1></a>
+    <div class="progressbar">
+    <a href="assignment2_0.html"><span>Part 1</span></a>
+    <span> - </span>
+    <a href="assignment2_1.html"><span>Part 2</span></a>
+    <span> - </span>
+    <a href="assignment2_2.html"><span>Part 3</span></a>
+    <span> - </span>
+    <a href="assignment2_3.html"><span>Part 4</span></a>
+  </div>
+    <div>Enter an amount of each item sold last week to calculate pay </div>
+    <br>
+<div>
+    <form name="myform">
+ <table>
+   <tr>
+     <td>Enter the Salesperson's Name:</td>
+     <td><input type="text" name="name" id="name" title="Make sure the Salesperson's Name is spelled correctly"></td>
+   </tr>
+      </table>
+      <br>
+<table>
+<tr>
+<td>Item 1:</td> 
+<td><input type="number" name="item1" size="10" id="item1"></td>
+</tr>
+  <tr>
+<td>Item 2:</td> 
+<td><input type="number" name="item2" size="10" id="item2"></td>
+</tr>
+ <tr>
+<td>Item 3:</td> 
+<td><input type="number" name="item3" size="10" id="item3"></td>
+</tr>
+  <tr>
+<td>Item 4:</td> 
+<td><input type="number" name="item4" size="10" id="item4"></td>
+</tr>
+</table>
+      <br>
+      <div id="outputDiv" name="outputDiv"></div>
+<br>
+
+<input type="button" onclick="process()" value="SUBMIT" id="Submit">
+<input type="reset" value="RESET" onclick="reset1()">
+  </form></div>
+    </body>
+
+</html>
