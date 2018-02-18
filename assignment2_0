@@ -1,0 +1,111 @@
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="homework 3.1 for CNIT 133 JavaScript class by Maxwell Kohn">
+  <title>CNIT 133 Project 3_1</title>
+ <link rel="stylesheet" href="style4.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+  function process(){
+    var HW, MID, FIN, ACR, hw, mid, fin, acr, FINAL;
+HW = document.forms["myform"].elements["hw"].value;
+MID = document.forms["myform"].elements["mid"].value;
+FIN = document.forms["myform"].elements["final"].value;
+ACR = document.forms["myform"].elements["acr"].value;
+    
+hw = parseFloat(HW);
+mid = parseFloat(MID);
+fin = parseFloat(FIN);
+acr = parseFloat(ACR);
+    
+if (isNaN(hw) || isNaN(mid) || isNaN(fin) || isNaN(acr) || hw < 0 || mid < 0 || fin < 0 || acr < 0 || hw > 100 || mid > 100 || fin > 100 || acr > 100) {
+
+document.forms["myform"].elements["hw"].value = " "; // clears hw input
+document.forms["myform"].elements["mid"].value = " "; //clears mid input
+document.forms["myform"].elements["final"].value = " "; //clears final exam input
+document.forms["myform"].elements["acr"].value = " "; //clears acr input
+document.forms["myform"].elements["hw"].focus(); // focuses cursor to hw input
+
+window.alert("Both values must be numbers and not be less than 0 and not greater than 100!");
+}
+else
+{
+   FINAL = (0.5*hw) + (0.2*mid) + (0.2*fin) + (0.1 * acr);
+  var FINAL1 = parseFloat(FINAL);
+  if (FINAL1 >= 90) {
+    document.getElementById("outputDiv").innerHTML = FINAL1.toFixed(0) +  ' - A';
+  }
+  if (FINAL1 < 90 & FINAL1 >= 80) {
+    document.getElementById("outputDiv").innerHTML = FINAL1.toFixed(0) +  ' - B';
+  }
+  if (FINAL1 < 80 & FINAL1 >= 70) {
+    document.getElementById("outputDiv").innerHTML = FINAL1.toFixed(0) +  ' - C';
+  }
+  if (FINAL1 < 70 & FINAL1 >= 60) {
+    document.getElementById("outputDiv").innerHTML = FINAL1.toFixed(0) +  ' - D - The Student must retake the Course';
+  }
+  if (FINAL1 < 60) {
+    document.getElementById("outputDiv").innerHTML = FINAL1.toFixed(0) +  ' - F - The Student must retake the Course';
+  }
+  }
+    
+  }
+    </script>
+  <script> 
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
+</script>
+  <script>
+    function reset1() {
+      document.getElementById("outputDiv").innerHTML = "";
+    }
+  </script>
+  </head>
+  <body>
+    <a href="index.html" class="home">
+      <img src="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-18-512.png" alt="small home image">
+    </a>
+    <a href="assignment1.html"><h1>Student Grades</h1></a>
+    <div class="progressbar">
+    <a href="assignment1_0.html"><span>Part 1</span></a>
+    <span> - </span>
+    <a href="assignment1_1.html"><span>Part 2</span></a>
+    <span> - </span>
+    <a href="assignment1_2.html"><span>Part 3</span></a>
+    <span> - </span>
+    <a href="assignment1_3.html"><span>Part 4</span></a>
+  </div>
+    <div id="flip">Enter Student Grades below to get their Final Score </div>
+<div id="panel">
+    <form name="myform">
+<table>
+<tr>
+<td>HW Average:</td> 
+<td><input type="number" name="hw" size="10" id="hwAvg"></td>
+</tr>
+  <tr>
+<td>Mid-Term Exam:</td> 
+<td><input type="number" name="mid" size="10" id="midAvg"></td>
+</tr>
+ <tr>
+<td>Final Exam:</td> 
+<td><input type="number" name="final" size="10" id="finalAvg"></td>
+</tr>
+  <tr>
+<td>ACR:</td> 
+<td><input type="number" name="acr" size="10" id="acrAvg"></td>
+</tr>
+</table>
+      <div id="outputDiv" name="outputDiv"></div>
+<br><br>
+
+<input type="button" onclick="process()" value="SUBMIT" id="Submit">
+<input type="reset" value="RESET" onclick="reset1()">
+  </form></div>
+    </body>
+
+</html>
