@@ -45,15 +45,16 @@ function process(){
 ITEM1 = document.forms["myform"].elements["item1"].value; //pull answer
 item1 = parseInt(ITEM1); //parse answer to int
   num = RANDOM1 * RANDOM2;
+
+  if (!item1){
+    window.alert('You must enter an answer!');
+  };
+  if (isNaN(num)){
+    window.alert('Click Next Question to Get Started!');
+  };
 if (item1 == RANDOM1 * RANDOM2) {
   window.alert('You got it right! ' + item1);
-}
-  elseif (!item1){
-    window.alert('You must enter an answer!');
-  }
-  elseif (isNaN(num)){
-    window.alert('Click Next Question to Get Started!');
-  }
+};
   else {
     window.alert('Try again! ' + num + " is the correct answer!");
   };
