@@ -1,0 +1,96 @@
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="homework 3.4 for CNIT 133 JavaScript class by Maxwell Kohn">
+  <title>CNIT 133 Project 2_3</title>
+ <link rel="stylesheet" href="style4.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( document ).tooltip();
+  } );
+  </script>
+  <style>
+  label {
+    display: inline-block;
+    width: 5em;
+  }
+  </style>
+  <script>
+  var random1;
+ var random2;
+  var RANDOM1;
+  var RANDOM2;
+    function reset1() {
+      document.getElementById("outputDiv").innerHTML = "";
+    };
+function nextQ() {
+        document.getElementById("outputDiv").innerHTML = "";
+        document.getElementById("item1").value = "";
+  random1 = Math.floor(Math.random() * 10); //integer between 0-9
+  random2 = Math.floor(Math.random() * 10); //integer between 0-9
+  RANDOM1 = parseInt(random1);
+  RANDOM2 = parseInt(random2);
+      document.getElementById("outputDiv").innerHTML = "What is " + RANDOM1 + " x " + RANDOM2 + "?";
+  return RANDOM1, RANDOM2;
+    };
+    
+function process(){
+    var ITEM1, item1, num;
+ITEM1 = document.forms["myform"].elements["item1"].value; //pull answer
+item1 = parseInt(ITEM1); //parse answer to int
+  num = RANDOM1 * RANDOM2;
+if (item1 == RANDOM1 * RANDOM2) {
+  window.alert('You got it right! ' + item1);
+}
+  else {
+    window.alert('Try again! ' + num + " is the correct answer!");
+  };
+  };
+
+  </script>
+  </head>
+  <body>
+    <a href="index.html" class="home">
+      <img src="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-18-512.png" alt="small home image">
+    </a>
+    <a href="assignment2.html"><h1>Multiplication Tables!</h1></a>
+    <div class="progressbar">
+    <a href="assignment2_0.html"><span>Part 1</span></a>
+    <span> - </span>
+    <a href="assignment2_1.html"><span>Part 2</span></a>
+    <span> - </span>
+    <a href="assignment2_2.html"><span>Part 3</span></a>
+    <span> - </span>
+    <a href="assignment2_3.html"><span>Part 4</span></a>
+  </div>
+
+    <br><br>
+
+    <form name="myform">
+<table>
+<tr>
+<td>Question:</td> 
+<td><div id="outputDiv" name="outputDiv"></div></td>
+</tr>
+  <tr>
+<td>Answer:</td> 
+<td><input type="number" name="item1" size="10" id="item1"></td>
+</tr>
+      </table>
+      <br>
+      
+<br>
+
+<input type="button" onclick="process()" value="SUBMIT" id="Submit">
+<input type="reset" value="RESET" onclick="reset1()">
+<input type="button" value="Next Question" onclick="nextQ()">
+  </form>
+    </body>
+
+</html>
