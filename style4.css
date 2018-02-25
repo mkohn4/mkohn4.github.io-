@@ -140,3 +140,12 @@ span {
   background-color: red;
 }
 
+form[name="myform"] {
+  display: inline-block;
+  position: absolute;
+}
+form[name="myform2"] {
+  display: inline-block;
+  position: absolute;
+  margin-left: 350px;
+}
