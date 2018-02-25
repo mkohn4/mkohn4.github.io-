@@ -1,0 +1,107 @@
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="homework 3.3 for CNIT 133 JavaScript class by Maxwell Kohn">
+  <title>CNIT 133 Project 2_2</title>
+ <link rel="stylesheet" href="style4.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+  function process(){
+    var ITEM1, ITEM2, item1, item2;
+ITEM1 = document.forms["myform"].elements["item1"].value; //pull fahrenheight
+ITEM2 = document.forms["myform2"].elements["item1"].value; //pull celsius
+
+    
+item1 = parseFloat(ITEM1); //parse fahrenheit to float
+item2 = parseFloat(ITEM2); // parse celsius to float
+    
+item1 = (5/9) * (item1 - 32); //Convert fahrenheit to celsius
+item2 = (9/5 * item2) + 32; //convert Celsius to Fahrenheit
+    
+document.forms["myform"].elements["item2"].value = item1; // inputs new celsius value to celsius box
+document.forms["myform2"].elements["item2"].value = item2; // inputs new fahrenheit into fahrenheit box
+    
+  }
+    </script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( document ).tooltip();
+  } );
+  </script>
+  <style>
+  label {
+    display: inline-block;
+    width: 5em;
+  }
+  </style>
+  <script>
+    function reset1() {
+      document.getElementById("outputDiv").innerHTML = "";
+    }
+    function reset2() {
+      document.getElementById("outputDiv2").innerHTML = "";
+    }
+  </script>
+  </head>
+  <body>
+    <a href="index.html" class="home">
+      <img src="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-18-512.png" alt="small home image">
+    </a>
+    <a href="assignment2.html"><h1>Temperature Conversion!</h1></a>
+    <div class="progressbar">
+    <a href="assignment2_0.html"><span>Part 1</span></a>
+    <span> - </span>
+    <a href="assignment2_1.html"><span>Part 2</span></a>
+    <span> - </span>
+    <a href="assignment2_2.html"><span>Part 3</span></a>
+    <span> - </span>
+    <a href="assignment2_3.html"><span>Part 4</span></a>
+  </div>
+
+    <br><br>
+
+    <form name="myform">
+<table>
+<tr>
+<td>Fahrenheit -> Celsius:</td> 
+<td><input type="number" name="item1" size="10" id="item1"></td>
+</tr>
+  <tr>
+<td>Celsius:</td> 
+<td><input type="number" name="item2" size="10" id="item2" readonly="readonly"></td>
+</tr>
+      </table>
+      <br>
+      <div id="outputDiv" name="outputDiv"></div>
+<br>
+
+<input type="button" onclick="process()" value="SUBMIT" id="Submit">
+<input type="reset" value="RESET" onclick="reset1()">
+  </form>
+  
+  <form name="myform2">
+<table>
+<tr>
+<td>Celsius -> Fahrenheit:</td> 
+<td><input type="number" name="item1" size="10" id="item1"></td>
+</tr>
+  <tr>
+<td>Fahrenheit:</td> 
+<td><input type="number" name="item2" size="10" id="item2" readonly="readonly"></td>
+</tr>
+      </table>
+      <br>
+      <div id="outputDiv2" name="outputDiv2"></div>
+<br>
+
+<input type="button" onclick="process()" value="SUBMIT" id="Submit">
+<input type="reset" value="RESET" onclick="reset2()">
+  </form>
+    </body>
+
+</html>
