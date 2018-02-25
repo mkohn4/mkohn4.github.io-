@@ -51,6 +51,9 @@ if (item1 == RANDOM1 * RANDOM2) {
   if (!item1){
     window.alert('You must enter an answer!');
   }
+  if (isNaN(num)){
+    window.alert('Click Next Question to Get Started!');
+  }
   else {
     window.alert('Try again! ' + num + " is the correct answer!");
   };
