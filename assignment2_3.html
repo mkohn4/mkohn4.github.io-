@@ -46,16 +46,16 @@ ITEM1 = document.forms["myform"].elements["item1"].value; //pull answer
 item1 = parseInt(ITEM1); //parse answer to int
   num = RANDOM1 * RANDOM2;
 
-  if (!item1){
+ if (!item1 && item1 != 0){
     window.alert('You must enter an answer!');
-  };
+  }
   if (isNaN(num)){
     window.alert('Click Next Question to Get Started!');
-  };
+  }
 if (item1 == RANDOM1 * RANDOM2) {
   window.alert('You got it right! ' + item1);
 }
-  else {
+  if(item1 != RANDOM1 * RANDOM2 && item1>=0) {
     window.alert('Try again! ' + num + " is the correct answer!");
   };
   };
@@ -98,7 +98,6 @@ if (item1 == RANDOM1 * RANDOM2) {
 <br>
 
 <input type="button" onclick="process()" value="SUBMIT" id="Submit">
-<input type="reset" value="RESET" onclick="reset1()">
 <input type="button" value="Next Question" onclick="nextQ()">
   </form>
     </body>
