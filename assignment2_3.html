@@ -53,7 +53,10 @@ item1 = parseInt(ITEM1); //parse answer to int
     window.alert('Click Next Question to Get Started!');
   }
 if (item1 == RANDOM1 * RANDOM2) {
-  window.alert('You got it right! ' + item1);
+  window.confirm('You got it right! ' + item1 + ' Want to try another one?');
+  if(confirm()) {
+    nextQ();
+  }
 }
   if(item1 != RANDOM1 * RANDOM2 && item1>=0) {
     window.alert('Try again! ' + num + " is the correct answer!");
