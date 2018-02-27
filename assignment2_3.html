@@ -52,16 +52,16 @@ item1 = parseInt(ITEM1); //parse answer to int
   if (isNaN(num)){
     window.alert('Click Next Question to Get Started!');
   }
-if (item1 == RANDOM1 * RANDOM2) {
-  window.confirm('You got it right! ' + item1 + ' Want to try another one?');
-  if(confirm()) {
-    nextQ();
-  }
-}
   if(item1 != RANDOM1 * RANDOM2 && item1>=0) {
     window.alert('Try again! ' + num + " is the correct answer!");
-  };
-  };
+  }
+  if (item1 == RANDOM1 * RANDOM2) {
+  window.alert('You got it right! ' + item1);
+    if(confirm('Would you like to try another one?')) {
+      nextQ();
+    }
+};
+};
 
   </script>
   </head>
