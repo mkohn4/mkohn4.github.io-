@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="homework 3.4 for CNIT 133 JavaScript class by Maxwell Kohn">
-  <title>CNIT 133 Project 3_0</title>
+  <meta name="description" content="homework 4.2 for CNIT 133 JavaScript class by Maxwell Kohn">
+  <title>CNIT 133 Project 3_1</title>
  <link rel="stylesheet" href="style4.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -24,23 +24,109 @@
   </style>
 <script>
 function process() {
-  //part 2
+  //part 2 - 1.05%
   var r = 0.05; //interest rate =0
   parseFloat(r);
   var n = 1; //n years = 1
   var total = 0;
   var o = {style: "currency", currency: "USD"};
-    document.writeln( "<table style='border: 1px solid black;'><tr> <th>Year</th> <th>Amount</th> <th>Rate</th> </tr>" );
+    $('#outputDiv').append( "<table style='border: 1px solid black;'><tr> <th>Year</th> <th>Amount</th> <th>Rate</th> </tr>" );
   while (n<=10) {
     var p = 1000; //principal = 1000
     var a=0;
     a = p*(1 + r)**n;
     total = a.toLocaleString("en", o);
-    document.writeln("<tr style='text-align:right; border: 1px solid black;'><td style='border:1px solid black;'>" + n + "</td>" + "<td style='border:1px solid black;'>" + total + "</td>" + "<td style='border:1px solid black;'>" + r + "</td></tr>" );
+    $('#outputDiv').append("<tr style='text-align:right; border: 1px solid black;'><td style='border:1px solid black;'>" + n + "</td>" + "<td style='border:1px solid black;'>" + total + "</td>" + "<td style='border:1px solid black;'>" + r + "</td></tr>" );
     n=n+1;
-  }
-  document.writeln( "</table>" );  
+  };
+  $('#outputDiv').append( "</table>" ); 
+  
+  //part 2 - 1.06%
+  var r = 0.06;
+  parseFloat(r);
+  var n = 1; //n years = 1
+  var total = 0;
+      $('#outputDiv').append( "<table style='border: 1px solid black;'><tr> <th>Year</th> <th>Amount</th> <th>Rate</th> </tr>" );
+  while (n<=10) {
+    var p = 1000; //principal = 1000
+    var a=0;
+    a = p*(1 + r)**n;
+    total = a.toLocaleString("en", o);
+    $('#outputDiv').append("<tr style='text-align:right; border: 1px solid black;'><td style='border:1px solid black;'>" + n + "</td>" + "<td style='border:1px solid black;'>" + total + "</td>" + "<td style='border:1px solid black;'>" + r + "</td></tr>" );
+    n=n+1;
+  };
+  $('#outputDiv').append( "</table>" );
+  
+  //part 2 - 1.07%
+  var r = 0.07;
+  parseFloat(r);
+  var n = 1; //n years = 1
+  var total = 0;
+      $('#outputDiv').append( "<table style='border: 1px solid black;'><tr> <th>Year</th> <th>Amount</th> <th>Rate</th> </tr>" );
+  while (n<=10) {
+    var p = 1000; //principal = 1000
+    var a=0;
+    a = p*(1 + r)**n;
+    total = a.toLocaleString("en", o);
+    $('#outputDiv').append("<tr style='text-align:right; border: 1px solid black;'><td style='border:1px solid black;'>" + n + "</td>" + "<td style='border:1px solid black;'>" + total + "</td>" + "<td style='border:1px solid black;'>" + r + "</td></tr>" );
+    n=n+1;
+  };
+  $('#outputDiv').append( "</table>" );
+  
+  //part 2 - 1.08%
+  var r = 0.08;
+  parseFloat(r);
+  var n = 1; //n years = 1
+  var total = 0;
+      $('#outputDiv').append( "<table style='border: 1px solid black;'><tr> <th>Year</th> <th>Amount</th> <th>Rate</th> </tr>" );
+  while (n<=10) {
+    var p = 1000; //principal = 1000
+    var a=0;
+    a = p*(1 + r)**n;
+    total = a.toLocaleString("en", o);
+    $('#outputDiv').append("<tr style='text-align:right; border: 1px solid black;'><td style='border:1px solid black;'>" + n + "</td>" + "<td style='border:1px solid black;'>" + total + "</td>" + "<td style='border:1px solid black;'>" + r + "</td></tr>" );
+    n=n+1;
+  };
+  $('#outputDiv').append( "</table>" );
+  
+  //part 2 - 1.09%
+  var r = 0.09;
+  parseFloat(r);
+  var n = 1; //n years = 1
+  var total = 0;
+      $('#outputDiv').append( "<table style='border: 1px solid black;'><tr> <th>Year</th> <th>Amount</th> <th>Rate</th> </tr>" );
+  while (n<=10) {
+    var p = 1000; //principal = 1000
+    var a=0;
+    a = p*(1 + r)**n;
+    total = a.toLocaleString("en", o);
+    $('#outputDiv').append("<tr style='text-align:right; border: 1px solid black;'><td style='border:1px solid black;'>" + n + "</td>" + "<td style='border:1px solid black;'>" + total + "</td>" + "<td style='border:1px solid black;'>" + r + "</td></tr>" );
+    n=n+1;
+  };
+  $('#outputDiv').append( "</table>" );
+  
+  //part 2 - 1.1%
+  var r = 0.1;
+  parseFloat(r);
+  var n = 1; //n years = 1
+  var total = 0;
+      $('#outputDiv').append( "<table style='border: 1px solid black;'><tr> <th>Year</th> <th>Amount</th> <th>Rate</th> </tr>" );
+  while (n<=10) {
+    var p = 1000; //principal = 1000
+    var a=0;
+    a = p*(1 + r)**n;
+    total = a.toLocaleString("en", o);
+    $('#outputDiv').append("<tr style='text-align:right; border: 1px solid black;'><td style='border:1px solid black;'>" + n + "</td>" + "<td style='border:1px solid black;'>" + total + "</td>" + "<td style='border:1px solid black;'>" + r + "</td></tr>" );
+    n=n+1;
+  };
+  $('#outputDiv').append( "</table>" );
 };
+  
+  </script>
+  <script>
+    function reset1() {
+      document.getElementById("outputDiv").innerHTML = "";
+    };
   </script>
   </head>
   <body> 
@@ -61,7 +147,8 @@ function process() {
     <form name="myform">
 <table>
 <tr>
-<td>Click Submit to see the results!</td> 
+<td>Click Submit to see the results!</td>
+  <div id=outputDiv></div>
 </tr>
       </table>
       <br>
@@ -69,6 +156,7 @@ function process() {
 <br>
 
 <input type="button" onclick="process()" value="SUBMIT" id="Submit">
+ <input type="reset" onclick="reset1()" value="RESET" id="Reset">
   </form>
     </body>
 
