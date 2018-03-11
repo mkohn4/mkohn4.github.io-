@@ -25,16 +25,18 @@
 <script>
 function process() {
   //part 2
-  var p = 1000; //principal = 1000
   var r = 0.05; //interest rate =0
+  parseFloat(r);
   var n = 1; //n years = 1
-  var a = 0; //accumulation + interest
   var total = 0;
+  var o = {style: "currency", currency: "USD"};
     document.writeln( "<table style='border: 1px solid black;'><tr> <th>Year</th> <th>Amount</th> <th>Rate</th> </tr>" );
   while (n<=10) {
-    a = p(1 + r)^n; 
-    total = total+a;
-    document.writeln( "<tr style='text-align:right;'><td>" + n + "</td>" + "<td>" + a + "</td>" + "<td>" + r + "</td></tr>" );
+    var p = 1000; //principal = 1000
+    var a=0;
+    a = p*(1 + r)**n;
+    total = a.toLocaleString("en", o);
+    document.writeln("<tr style='text-align:right; border: 1px solid black;'><td style='border:1px solid black;'>" + n + "</td>" + "<td style='border:1px solid black;'>" + total + "</td>" + "<td style='border:1px solid black;'>" + r + "</td></tr>" );
     n=n+1;
   }
   document.writeln( "</table>" );  
