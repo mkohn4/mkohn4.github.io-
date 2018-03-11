@@ -1,0 +1,78 @@
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="homework 3.4 for CNIT 133 JavaScript class by Maxwell Kohn">
+  <title>CNIT 133 Project 3_0</title>
+ <link rel="stylesheet" href="style4.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( document ).tooltip();
+  } );
+  </script>
+  <style>
+  label {
+    display: inline-block;
+    width: 5em;
+  }
+  </style>
+<script>
+//part 1a
+  var total=0;
+  for (var x=5; x<=20; x+=3) {
+    document.writeIn(x);
+    total = total+x;
+  }
+  document.writeIn("The sum of the number is " + total);
+  
+ //part1b
+  var total=0, x=0;
+  while (x<=31) {
+    x=x+3;
+    total= total+x;
+    document.writeIn(x);
+  }
+  document.writeIn("the sum of the numbers is " + total);
+  </script>
+  </head>
+  <body>
+    <a href="index.html" class="home">
+      <img src="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-18-512.png" alt="small home image">
+    </a>
+    <a href="assignment3.html"><h1>For and While Loops!</h1></a>
+    <div class="progressbar">
+    <a href="assignment3_0.html"><span>Part 1</span></a>
+    <span> - </span>
+    <a href="assignment3_1.html"><span>Part 2</span></a>
+    <span> - </span>
+    <a href="assignment3_2.html"><span>Part 3</span></a>
+  </div>
+
+    <br><br>
+
+    <form name="myform">
+<table>
+<tr>
+<td>Question:</td> 
+<td><div id="outputDiv" name="outputDiv"></div></td>
+</tr>
+  <tr>
+<td>Answer:</td> 
+<td><input type="number" name="item1" size="10" id="item1"></td>
+</tr>
+      </table>
+      <br>
+      
+<br>
+
+<input type="button" onclick="process()" value="SUBMIT" id="Submit">
+<input type="button" value="Next Question" onclick="nextQ()">
+  </form>
+    </body>
+
+</html>
