@@ -149,3 +149,10 @@ form[name="myform2"] {
   position: absolute;
   margin-left: 350px;
 }
+
+  .home {
+  z-index: 100;
+}
+.space {
+  padding: 4px 4px 4px 4px;
+}
