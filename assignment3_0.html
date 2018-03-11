@@ -22,22 +22,26 @@
   }
   </style>
 <script>
-//part 1a
-  var total=0;
+function process() {
+  //part 1a
+  var total=0, product=1;
   for (var x=5; x<=20; x+=3) {
-    document.writeIn(x);
+    document.writeln(x);
     total = total+x;
+    product = product*x; 
   }
-  document.writeIn("The sum of the number is " + total);
-  
+  document.writeln("The sum of the numbers is " + total + " / The Product of the numbers is " + product);
+document.writeln('<br>');
  //part1b
-  var total=0, x=0;
+  var total=0, x=3, product=1;
   while (x<=31) {
-    x=x+3;
+    document.writeln(x);
     total= total+x;
-    document.writeIn(x);
+    product = product*x;
+        x=x+4;
   }
-  document.writeIn("the sum of the numbers is " + total);
+  document.writeln("the sum of the numbers is " + total + " / The Product of the numbers is " + product);
+};
   </script>
   </head>
   <body>
@@ -58,20 +62,14 @@
     <form name="myform">
 <table>
 <tr>
-<td>Question:</td> 
-<td><div id="outputDiv" name="outputDiv"></div></td>
-</tr>
-  <tr>
-<td>Answer:</td> 
-<td><input type="number" name="item1" size="10" id="item1"></td>
+<td>Click Submit to see the results!</td> 
 </tr>
       </table>
       <br>
-      
+    
 <br>
 
 <input type="button" onclick="process()" value="SUBMIT" id="Submit">
-<input type="button" value="Next Question" onclick="nextQ()">
   </form>
     </body>
 
