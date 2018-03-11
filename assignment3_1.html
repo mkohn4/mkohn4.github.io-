@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="homework 3.4 for CNIT 133 JavaScript class by Maxwell Kohn">
+  <title>CNIT 133 Project 3_0</title>
+ <link rel="stylesheet" href="style4.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( document ).tooltip();
+  } );
+  </script>
+  <style>
+  label {
+    display: inline-block;
+    width: 5em;
+  }
+  </style>
+<script>
+function process() {
+  //part 2
+  var p = 1000; //principal = 1000
+  var r = 0.05; //interest rate =0
+  var n = 1; //n years = 1
+  var a = 0; //accumulation + interest
+  var total = 0;
+    document.writeln( "<table style='border: 1px solid black;'><tr> <th>Year</th> <th>Amount</th> <th>Rate</th> </tr>" );
+  while (n<=10) {
+    a = p(1 + r)^n; 
+    total = total+a;
+    document.writeln( "<tr style='text-align:right;'><td>" + n + "</td>" + "<td>" + a + "</td>" + "<td>" + r + "</td></tr>" );
+    n=n+1;
+  }
+  document.writeln( "</table>" );  
+};
+  </script>
+  </head>
+  <body> 
+    <a href="index.html" class="home">
+      <img src="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-18-512.png" alt="small home image">
+    </a>
+    <a href="assignment3.html"><h1>Currency Conversion!</h1></a>
+    <div class="progressbar">
+    <a href="assignment3_0.html"><span>Part 1</span></a>
+    <span> - </span>
+    <a href="assignment3_1.html"><span>Part 2</span></a>
+    <span> - </span>
+    <a href="assignment3_2.html"><span>Part 3</span></a>
+  </div>
+
+    <br><br>
+
+    <form name="myform">
+<table>
+<tr>
+<td>Click Submit to see the results!</td> 
+</tr>
+      </table>
+      <br>
+    
+<br>
+
+<input type="button" onclick="process()" value="SUBMIT" id="Submit">
+  </form>
+    </body>
+
+</html>
