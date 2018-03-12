@@ -22,29 +22,59 @@
     width: 5em;
   }
   </style>
+  
+  
 <script>
 function process() {
-  //part 2 - 1.05%
-  var r = 0.05; //interest rate =0.05
-  parseFloat(r);
-  var n = 1; //n years = 1
-  var total = 0;
-  var o = {style: "currency", currency: "USD"};
+  
+  var number1, number2, number3, number4, number5, n1, n2, n3, n4, n5;
+
+number1 = document.forms["myform"].elements["num1"].value;
+
+number2 = document.forms["myform"].elements["num2"].value;
+
+number3 = document.forms["myform"].elements["num3"].value;
     
-while(r<=0.1) {
-  $('#outputDiv').append( "<table style='border: 1px solid black;'><tr> <th>Year</th> <th>Amount</th> <th>Rate</th> </tr>" );
-  while (n<=10) {
-    var p = 1000; //principal = 1000
-    var a=0;
-    a = p*(1 + r)**n;
-    total = a.toLocaleString("en", o);
-    $('#outputDiv').append("<tr style='text-align:right; border: 1px solid black;'><td class='space' style='border:1px solid black;'>" + n + "</td>" + "<td class='space' style='border:1px solid black;'>" + total + "</td>" + "<td class='space' style='border:1px solid black;'>" + r + "</td></tr>" );
-    n=n+1;
-   }
-  $('#outputDiv').append( "</table>" );
-  r=r+0.01;
+number4 = document.forms["myform"].elements["num4"].value;
+    
+number5 = document.forms["myform"].elements["num5"].value;
+n1 = parseInt(number1);
+n2 = parseInt(number2);
+n3 = parseInt(number3);
+n4 = parseInt(number4);
+n5 = parseInt(number5);
+  if ( n1 > 5 || n1 < 1 || isNaN(n1)){
+      document.forms["myform"].elements["num1ans"].value = "//";
   }
+else {
+
+  switch ( n1 ) {
+    case "1":
+      n1=n1*2.98;
+      document.forms["myform"].elements["num1ans"].value = n1;
+      break; 
+             
+    case "2":
+      n1=n1*2.98;
+      document.forms["myform"].elements["num1ans"].value = n1;
+      break; 
+    case "3":
+      n1=n1*2.98;
+      document.forms["myform"].elements["num1ans"].value = n1;
+      break; 
+    case "4":
+      n1=n1*2.98;
+      document.forms["myform"].elements["num1ans"].value = n1;
+      break; 
+    case="5":
+      n1=n1*2.98;
+      document.forms["myform"].elements["num1ans"].value = n1;
+      break; 
+
+     }
+  
 }
+};
   
   </script>
   <script>
@@ -53,35 +83,71 @@ while(r<=0.1) {
     };
   </script>
   </head>
-  <body> 
+ <body>
     <a href="index.html" class="home">
       <img src="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-18-512.png" alt="small home image">
     </a>
-    <a href="assignment3.html"><h1>Currency Conversion!</h1></a>
-    <div class="progressbar">
-    <a href="assignment3_0.html"><span>Part 1</span></a>
+    <a href="assignment1.html"><h1>CNIT Assignment 4 - Hardass table</h1></a>
+  <div class="progressbar">
+    <a href="assignment1_0.html"><span>Part 1</span></a>
     <span> - </span>
-    <a href="assignment3_1.html"><span>Part 2</span></a>
+    <a href="assignment1_1.html"><span>Part 2</span></a>
     <span> - </span>
-    <a href="assignment3_2.html"><span>Part 3</span></a>
+    <a href="assignment1_2.html"><span>Part 3</span></a>
+    <span> - </span>
+    <a href="assignment1_3.html"><span>Part 4</span></a>
+    <span> - </span>
+    <a href="assignment1_4.html"><span>Extra Credit</span></a>
   </div>
-
-    <br><br>
-
     <form name="myform">
 <table>
 <tr>
-<td>Click Submit to see the results!</td>
-  <div id=outputDiv></div>
+  <th class="border">Item #:</th>
+  <th class="border"> Quantity:</th>
+  <th class="border"> Price:</th>
+  <th class="border"> Amount:</th>
+  </tr>
+  <tr>
+<td class="border">1</td> 
+<td class="border"><input type="number" name="num1" size="10" min="1" max="5"></td>
+    <td class="border">2.98</td>
+        <td class="border"><input name="num1ans" disabled="disabled"></td>
+
 </tr>
-      </table>
-      <br>
-    
-<br>
+  <tr>
+<td class="border">2</td> 
+<td class="border"><input type="number" name="num2" size="10" min="1" max="5"></td>
+    <td class="border">4.50</td>
+        <td class="border"><input disabled="disabled"></td>
+
+</tr>
+  <tr>
+<td class="border">3</td> 
+<td class="border"><input type="number" name="num3" size="10" min="1" max="5"></td>
+    <td class="border">9.98</td>
+        <td class="border"><input disabled="disabled"></td>
+
+</tr>
+  <tr>
+<td class="border">4</td> 
+<td class="border"><input type="number" name="num4" size="10" min="1" max="5"></td>
+    <td class="border">4.49</td>
+        <td class="border"><input disabled="disabled"></td>
+
+</tr>
+    <tr>
+<td class="border">5</td> 
+<td class="border"><input type="number" name="num5" size="10" min="1" max="5"></td>
+    <td class="border">6.87</td>
+        <td class="border"><input disabled="disabled"></td>
+
+</tr>
+</table>
+<br><br>
 
 <input type="button" onclick="process()" value="SUBMIT" id="Submit">
- <input type="reset" onclick="reset1()" value="RESET" id="Reset">
-  </form>
-    </body>
+<input type="reset" value="RESET">
+</form>
+</body>
 
 </html>
