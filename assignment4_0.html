@@ -25,153 +25,27 @@
   
   
 <script>
-function process() {
+$(document).ready(function(){
+
+  $("#myform").validate({
+//declare errorMessage
+		messages: {
+			name: "Please enter your name",
+      rating: "Please choose a rating",
+      team: "Please choose at least one team",
+      occupation: "Please choose an occupation",
+	    },
+    //start errorPlacement
+  errorPlacement: function(error, element) {
+  if ( element.is(":radio") || element.is(":checkbox")) {
+    error.appendTo( element.parent());
+  } else {
+    error.insertAfter(element);
+  }
+  } // end errorPlacement
+ });
+});
   
-  var number1, number2, number3, number4, number5, n1, n2, n3, n4, n5, total;
-number1 = document.forms["myform"].elements["num1"].value;
-number2 = document.forms["myform"].elements["num2"].value;
-number3 = document.forms["myform"].elements["num3"].value;
-    
-number4 = document.forms["myform"].elements["num4"].value;
-    
-number5 = document.forms["myform"].elements["num5"].value;
-n1 = parseInt(number1);
-n2 = parseInt(number2);
-n3 = parseInt(number3);
-n4 = parseInt(number4);
-n5 = parseInt(number5);
-  switch ( n1 ) {
-    case 1:
-      n1=n1*2.98;
-      document.forms["myform"].elements["num1ans"].value = n1;
-      break;        
-    case 2:
-      n1=n1*2.98;
-      document.forms["myform"].elements["num1ans"].value = n1;
-      break; 
-    case 3:
-      n1=n1*2.98;
-      document.forms["myform"].elements["num1ans"].value = n1;
-      break; 
-    case 4:
-      n1=n1*2.98;
-      document.forms["myform"].elements["num1ans"].value = n1;
-      break; 
-    case 5:
-      n1=n1*2.98;
-      document.forms["myform"].elements["num1ans"].value = n1;
-      break; 
-     }
-  switch ( n2 ) {
-    case 1:
-      n2=n2*4.50;
-      document.forms["myform"].elements["num2ans"].value = n2;
-      break;        
-    case 2:
-      n2=n2*4.50;
-      document.forms["myform"].elements["num2ans"].value = n2;
-      break; 
-    case 3:
-      n2=n2*4.50;
-      document.forms["myform"].elements["num2ans"].value = n2;
-      break; 
-    case 4:
-      n2=n2*4.50;
-      document.forms["myform"].elements["num2ans"].value = n2;
-      break; 
-    case 5:
-      n2=n2*4.50;
-      document.forms["myform"].elements["num2ans"].value = n2;
-      break; 
-     }
-    switch ( n3 ) {
-    case 1:
-      n3=n3*9.98;
-      document.forms["myform"].elements["num3ans"].value = n3;
-      break;        
-    case 2:
-      n3=n3*9.98;
-      document.forms["myform"].elements["num3ans"].value = n3;
-      break; 
-    case 3:
-      n3=n3*9.98;
-      document.forms["myform"].elements["num3ans"].value = n3;
-      break; 
-    case 4:
-      n3=n3*9.98;
-      document.forms["myform"].elements["num3ans"].value = n3;
-      break; 
-    case 5:
-      n3=n3*9.98;
-      document.forms["myform"].elements["num3ans"].value = n3;
-      break; 
-     }
-    switch ( n4 ) {
-    case 1:
-      n4=n4*4.49;
-      document.forms["myform"].elements["num4ans"].value = n4;
-      break;        
-    case 2:
-      n4=n4*4.49;
-      document.forms["myform"].elements["num4ans"].value = n4;
-      break;  
-    case 3:
-      n4=n4*4.49;
-      document.forms["myform"].elements["num4ans"].value = n4;
-      break;  
-    case 4:
-       n4=n4*4.49;
-      document.forms["myform"].elements["num4ans"].value = n4;
-      break;  
-    case 5:
-      n4=n4*4.49;
-      document.forms["myform"].elements["num4ans"].value = n4;
-      break; 
-     }
-    switch ( n5 ) {
-    case 1:
-      n5=n5*6.87;
-      document.forms["myform"].elements["num5ans"].value = n5;
-      break;        
-    case 2:
-      n5=n5*6.87;
-      document.forms["myform"].elements["num5ans"].value = n5;
-      break;
-    case 3:
-      n5=n5*6.87;
-      document.forms["myform"].elements["num5ans"].value = n5;
-      break; 
-    case 4:
-      n5=n5*6.87;
-      document.forms["myform"].elements["num5ans"].value = n5;
-      break; 
-    case 5:
-      n5=n5*6.87;
-      document.forms["myform"].elements["num5ans"].value = n5;
-      break; 
-     }
-  //grab values
-  number1 = document.forms["myform"].elements["num1ans"].value;
-number2 = document.forms["myform"].elements["num2ans"].value;
-number3 = document.forms["myform"].elements["num3ans"].value;
-    
-number4 = document.forms["myform"].elements["num4ans"].value;
-    
-number5 = document.forms["myform"].elements["num5ans"].value;
-n1 = parseFloat(number1);
-n2 = parseFloat(number2);
-n3 = parseFloat(number3);
-n4 = parseFloat(number4);
-n5 = parseFloat(number5);
-  total = n1+n2+n3+n4+n5;
-  document.forms["myform"].elements["total"].value = total.toFixed(2);
-}
-  
-  </script>
-  <script>
-    function reset1() {
-      document.getElementById("outputDiv").innerHTML = "";
-    };
   </script>
   </head>
  <body>
@@ -206,9 +80,9 @@ and different id values for both radio and checkbox elements -->
    </td>
    </tr>
    <tr>
-   <td><label for="occ" class="label">Occupation:</label></td>
+   <td><label for="occuptaion" class="label">Occupation:</label></td>
    <td>
-   <select name="occ" id="occ" class="required" aria-required="true">
+   <select name="occupation" id="occupation" class="required" aria-required="true">
       <option value="">-Choose one-</option>
       <option value="student">student</option>
       <option value="teacher">teacher</option>
@@ -219,14 +93,10 @@ and different id values for both radio and checkbox elements -->
    </tr>
    <tr>
    <td><input type="submit" id="submit_button" value="SUBMIT"></td>
-   <td><input type="reset" value="RESET" onclick="window.location.reload();"></td>
+   <td><input type="reset" value="RESET" onclick="reset"></td>
    </tr>
- </tbody></table>
-
-<br><br>
-
-<input type="button" onclick="process()" value="SUBMIT" id="Submit">
-<input type="reset" value="RESET">
+ </tbody>
+</table>
 </form>
 </body>
 
