@@ -188,52 +188,41 @@ n5 = parseFloat(number5);
   </div>
     <form name="myform">
 <table>
-<tr>
-  <th class="border">Item #:</th>
-  <th class="border"> Quantity:</th>
-  <th class="border"> Price:</th>
-  <th class="border"> Amount:</th>
-  </tr>
-  <tr>
-<td class="border">1</td> 
-<td class="border"><input type="number" name="num1" size="10" min="1" max="5"></td>
-    <td class="border">2.98</td>
-        <td class="border"><input name="num1ans" disabled="disabled"></td>
+   <tbody><tr>
+   <td>Name</td>
+   <td><input type="text" name="name" id="name" size="20" class="required" autofocus="" aria-required="true"></td>
+   </tr>
+   <!-- For error message to be appended correctly, must use only one parent tag (in this case <tr>)  
+and different id values for both radio and checkbox elements -->
+   <tr>
+   <td>Rate this page:</td>
+   <td>Good<input type="radio" id="rating1" name="rating" class="required" value="good" aria-required="true">
+   Poor<input type="radio" id="rating2" value="poor" name="rating"></td>
+   </tr>
+   <tr>
+   <td>Favorite team:</td>
+   <td>Giants<input type="checkbox" id="team1" name="team" value="Giants" class="required" aria-required="true">
+   49ers<input type="checkbox" id="team2" value="49ers" name="team">
+   </td>
+   </tr>
+   <tr>
+   <td><label for="occ" class="label">Occupation:</label></td>
+   <td>
+   <select name="occ" id="occ" class="required" aria-required="true">
+      <option value="">-Choose one-</option>
+      <option value="student">student</option>
+      <option value="teacher">teacher</option>
+      <option value="programmer">programmer</option>
+      <option value="other">other</option>
+   </select>
+   </td>
+   </tr>
+   <tr>
+   <td><input type="submit" id="submit_button" value="SUBMIT"></td>
+   <td><input type="reset" value="RESET" onclick="window.location.reload();"></td>
+   </tr>
+ </tbody></table>
 
-</tr>
-  <tr>
-<td class="border">2</td> 
-<td class="border"><input type="number" name="num2" size="10" min="1" max="5"></td>
-    <td class="border">4.50</td>
-        <td class="border"><input name="num2ans" disabled="disabled"></td>
-
-</tr>
-  <tr>
-<td class="border">3</td> 
-<td class="border"><input type="number" name="num3" size="10" min="1" max="5"></td>
-    <td class="border">9.98</td>
-        <td class="border"><input name="num3ans" disabled="disabled"></td>
-
-</tr>
-  <tr>
-<td class="border">4</td> 
-<td class="border"><input type="number" name="num4" size="10" min="1" max="5"></td>
-    <td class="border">4.49</td>
-        <td class="border"><input name="num4ans" disabled="disabled"></td>
-
-</tr>
-    <tr>
-<td class="border">5</td> 
-<td class="border"><input type="number" name="num5" size="10" min="1" max="5"></td>
-    <td class="border">6.87</td>
-        <td class="border"><input name="num5ans" disabled="disabled"></td>
-
-</tr>
-  <tr>
-    <td colspan="3" class="border">Total Amount sold</td>
-    <td class="border"><input name="total" disabled="disbaled"></td>
-  </tr>
-</table>
 <br><br>
 
 <input type="button" onclick="process()" value="SUBMIT" id="Submit">
